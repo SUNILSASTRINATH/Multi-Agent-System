@@ -17,7 +17,7 @@ async def summarize_with_ollama(prompt: str, system: Optional[str] = None) -> Op
     host = settings.OLLAMA_HOST
     if host:
         os.environ["OLLAMA_HOST"] = host
-
+    print(f"Using Ollama model: {model} on host: {host}")
     def _call() -> Optional[str]:
         try:
             resp = ollama.chat(model=model, messages=[

@@ -14,7 +14,7 @@ async def lifespan(app: FastAPI):
         await shutdown_http()
 
 
-app = FastAPI(title="Agentic Mini", version="0.1.0", lifespan=lifespan)
+app = FastAPI(title="Agentic Mini", version="0.1.0", lifespan=lifespan, summary="Agentic Mini is a simple agentic framework for building AI agents.")
 
 # Enable CORS for local frontend
 app.add_middleware(
